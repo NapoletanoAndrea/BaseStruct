@@ -15,7 +15,7 @@ MonoBehaviour:
   templateScene: {fileID: 102900000, guid: 99c9720ab356a0642a771bea13969a05, type: 3}
   templateName: Base Scene Template
   description: Empty Scene with a Mono Manager
-  preview: {fileID: 0}
+  preview: {fileID: 2768487325948359826}
   dependencies:
   - dependency: {fileID: 11400000, guid: a6560a915ef98420e9faacc1c7438823, type: 2}
     instantiationMode: 0

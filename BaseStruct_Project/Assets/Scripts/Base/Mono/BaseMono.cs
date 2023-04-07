@@ -20,7 +20,9 @@ namespace Base.Mono
 		{ }
 
 		protected virtual void PreAwake()
-		{ }
+		{
+			GetComponent(typeof(Rigidbody));
+		}
 
 		protected virtual void MonoUpdate()
 		{ }
