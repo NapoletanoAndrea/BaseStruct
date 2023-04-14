@@ -3,9 +3,8 @@
 
 	public abstract class VolatileMono : BaseMono
 	{
-		protected override void Awake()
+		protected virtual void Awake()
 		{
-			base.Awake();
 			MonoManager.Add(this);
 			PreAwake();
 		}

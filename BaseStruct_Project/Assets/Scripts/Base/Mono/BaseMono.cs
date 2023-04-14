@@ -16,18 +16,25 @@ namespace Base.Mono
 
 		#region Overridable Methods
 
-		protected virtual void Awake()
-		{ }
-
 		protected virtual void PreAwake()
-		{
-			GetComponent(typeof(Rigidbody));
-		}
+		{ }
 
 		protected virtual void MonoUpdate()
 		{ }
 
 		protected virtual void MonoFixedUpdate()
+		{ }
+
+		protected virtual void MonoLateUpdate()
+		{ }
+
+		private void Update()
+		{ }
+
+		private void FixedUpdate()
+		{ }
+
+		private void LateUpdate()
 		{ }
 
 		#endregion
@@ -51,6 +58,11 @@ namespace Base.Mono
 		public virtual void Public_MonoFixedUpdate()
 		{
 			MonoFixedUpdate();
+		}
+		
+		public virtual void Public_MonoLateUpdate()
+		{
+			MonoLateUpdate();
 		}
 
 		#endregion

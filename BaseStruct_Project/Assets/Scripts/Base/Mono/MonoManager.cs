@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 namespace Base.Mono
@@ -8,10 +7,10 @@ namespace Base.Mono
 	public class MonoManager : MonoBehaviour
 	{
 		private static List<BaseMono> _baseMonoList;
-		
+
 		private void Awake()
 		{
-			_baseMonoList = FindObjectsOfType<BaseMono>().ToList();
+			_baseMonoList = new(FindObjectsOfType<BaseMono>());
 			for (int i = 0; i < _baseMonoList.Count; i++)
 			{
 				_baseMonoList[i].Public_PreAwake();
@@ -31,6 +30,14 @@ namespace Base.Mono
 			for (int i = 0; i < _baseMonoList.Count; i++)
 			{
 				_baseMonoList[i].Public_MonoFixedUpdate();
+			}
+		}
+
+		private void LateUpdate()
+		{
+			for (int i = 0; i < _baseMonoList.Count; i++)
+			{
+				_baseMonoList[i].Public_MonoLateUpdate();
 			}
 		}
 
